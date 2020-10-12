@@ -1,6 +1,6 @@
 "use strict";
 const restartButton = document.getElementsByClassName('btn');
-var circleTurn= true;
+var circleTurn= false;
 let state=[];
 
 
@@ -8,6 +8,14 @@ let state=[];
 window.onload = function(){
     document.querySelectorAll("#board div").forEach(function(divs){
         divs.setAttribute("class", "square");
+        divs.onmouseover = function(event) {
+            event.target.classList.add("hover");
+        divs.onmouseout = function(event) {
+            event.target.classList.remove("hover");
+            event.target.classList.add("hover O");
+        }
+            /* event.target: parent element */
+          };
     });
 
     function swapTurns() {
