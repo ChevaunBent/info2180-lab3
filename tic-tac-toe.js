@@ -38,6 +38,7 @@ window.onload = function(){
 
     }
 
+
     document.querySelectorAll("#board div").forEach(item => {
         item.addEventListener('click', event => {
           if(circleTurn){
